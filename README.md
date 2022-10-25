@@ -72,7 +72,7 @@ WIP\
 - position-mirror gives position-opposite effect instead of position-mirror
 - Resetting Offense Priorities each pass causes a crash
 - Chat Box Lag for Win11 users, letters cant be typed until after delay
-
+- action-stop can cause a crash
 
 
 
