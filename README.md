@@ -3,8 +3,8 @@
 From Oldest to Newest in #bug-reports channel on AIScripters\
 NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
-Number of Found Bugs since Dec 28, 2021: 60\
-Number of Bugs unchecked since then: 57\
+Number of Found Bugs since Dec 28, 2021: 61\
+Number of Bugs unchecked since then: 58\
 Number of Bugs fixed since then: 2\
 Number of Bugs broken since then: 0\
 Number of Bugs as "Won't Fix": 1\
