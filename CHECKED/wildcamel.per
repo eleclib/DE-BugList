@@ -1,0 +1,36 @@
+
+; wildcamel
+
+; TEST FOR: ai cant up-find-remote wild-camel
+
+
+(defconst wild-camel 884)
+(defconst wild-camel-class 909)
+
+(defconst gl-game-time 100)
+(defconst gl-saved-search-state 41)
+(defconst gl-local-total 41)
+(defconst gl-local-last 42)
+(defconst gl-remote-total 43)
+(defconst gl-remote-last 44)
+
+
+(defrule
+    (true)
+    =>
+    (set-strategic-number sn-focus-player-number 0)
+    (up-full-reset-search)
+    (up-find-remote c: wild-camel c: 40)
+    (up-get-search-state gl-saved-search-state)
+    (up-chat-data-to-all "gl-remote-total of wild-camel: %d" g: gl-remote-total)
+)
+
+(defrule
+    (true)
+    =>
+    (set-strategic-number sn-focus-player-number 0)
+    (up-full-reset-search)
+    (up-find-remote c: wild-camel-class c: 40)
+    (up-get-search-state gl-saved-search-state)
+    (up-chat-data-to-all "gl-remote-total of wild-camel-class: %d" g: gl-remote-total)
+)

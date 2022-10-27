@@ -1,18 +1,35 @@
 # DE-BugList
 
 From Oldest to Newest in #bug-reports channel on AIScripters\
-NOTE: The bugs listed have not been re-checked for being resolved, some may have been fixed while others may not have been
+NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
-Number of Listed Found Bugs since Dec 28, 2021: 51\
-Number of Listed Found Bugs fixed since then: ??\
-Number of Listed Found Bugs broken still since then: ??\
-Percentage of Bugs fixed (reported to fixed): ??%
+Number of Found Bugs since Dec 28, 2021: 60\
+Number of Bugs unchecked since then: 57\
+Number of Bugs fixed since then: 2\
+Number of Bugs broken since then: 0\
+Number of Bugs as "Won't Fix": 1\
+Percentage of Bugs fixed: ??%\
+Percentage of Bugs broken: ??%\
+Percentage of Bugs "Won't Fix": ??%
 
 ...\
-WIP\
+CHECKED\
 ...
 
-- ai cant up-find-remote wild-camel
+- [Won't Fix] AI unable to up-find-remote wild-camel/wild-camel-class
+- [Fixed] up-get-fact / up-get-focus-fact / up-get-target-fact / up-get-player-fact   don't return true
+- [Fixed] counting buildings (dynamically) does not include pending
+
+...\
+IN PROGRESS\
+...
+
+
+
+...\
+PENDING\
+...
+
 - unit assistance cant be disabled between sn-safe-town-size and sn-maximum-town-size
 - object-data-target-id only return -1 when units in formation with action-patrol or action-attack-move even when they are attacking enemy's object
 - cant queue techs one after another, only a tech and a unit (fixed?)
@@ -26,7 +43,6 @@ WIP\
 - counting enemy barracks huskarl or elite barracks huskarl returns -1, counting huskarl-set returns 2 less than expected
 - timers bugged (fixed?)
 - tc ungarrison onto deer (up-gather-inside c: town-center c: -1) prevents gather points from being set
-- up-get-player-fact returns false
 - up-create-group when the local list includes garrisoned units does not work correctly, any garrisoned units will be excluded from the goup
 - up-get-object-type-data: object-data-speed doesnt work and returns -2, object-data-dropsite incorrectly gives 109 (town-center) when it shouldnt be avilable for this command
 - up-get-object-data: object-data-train-site not working for villagers (including idle villager type), object-data-dropsite bugged for villagers (always gives 109 (town-center)) when it should give mill, lumber camp, or mining camp depending on what it was assigned to
@@ -72,7 +88,7 @@ WIP\
 - position-mirror gives position-opposite effect instead of position-mirror
 - Resetting Offense Priorities each pass causes a crash
 - Chat Box Lag for Win11 users, letters cant be typed until after delay
-- action-stop can cause a crash
+
 
 
 

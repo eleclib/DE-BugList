@@ -1,0 +1,42 @@
+
+; upgetxxxxfact
+
+; TEST FOR: up-get-fact / up-get-focus-fact / up-get-target-fact / up-get-player-fact   don't return true
+
+
+(defconst gl-wood-amount 1)
+
+
+(defrule
+    (up-get-fact wood-amount 0 gl-wood-amount)
+    =>
+    (up-chat-data-to-all "[up-get-fact] gl-wood-amount: %d" g: gl-wood-amount)
+)
+
+
+(defrule
+    (true)
+    =>
+    (set-strategic-number sn-focus-player-number my-player-number)
+    (set-strategic-number sn-target-player-number my-player-number)
+)
+
+(defrule
+    (up-get-focus-fact wood-amount 0 gl-wood-amount)
+    =>
+    (up-chat-data-to-all "[up-get-focus-fact] gl-wood-amount: %d" g: gl-wood-amount)
+)
+
+
+(defrule
+    (up-get-target-fact wood-amount 0 gl-wood-amount)
+    =>
+    (up-chat-data-to-all "[up-get-target-fact] gl-wood-amount: %d" g: gl-wood-amount)
+)
+
+
+(defrule
+    (up-get-player-fact my-player-number wood-amount 0 gl-wood-amount)
+    =>
+    (up-chat-data-to-all "[up-get-player-fact] gl-wood-amount: %d" g: gl-wood-amount)
+)

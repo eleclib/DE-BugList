@@ -1,0 +1,20 @@
+
+; dynamiccountingpending
+
+; TEST FOR: counting buildings (dynamically) does not include pending
+
+
+(defrule
+    (up-object-type-count-total c: house > 0)
+    (up-object-type-count c: house == 0)
+    =>
+    (chat-to-all "We have at least one pending house")
+)
+
+(defrule
+    (up-object-type-count-total c: villager > 0)
+    (up-object-type-count c: villager == 0)
+    =>
+    (chat-to-all "We have at least one pending villager")
+)
+
