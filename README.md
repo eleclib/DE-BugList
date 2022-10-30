@@ -4,8 +4,9 @@ From Oldest to Newest in #bug-reports channel on AIScripters\
 NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
 Number of Found Bugs since Dec 28, 2021: 61\
-Number of Bugs unchecked since then: 58\
-Number of Bugs fixed since then: 2\
+Number of Bugs unchecked since then: 51\
+Number of Bugs fixed since then: 6\
+Number of Bugs partially fixed since then: 3\
 Number of Bugs broken since then: 0\
 Number of Bugs as "Won't Fix": 1\
 Percentage of Bugs fixed: ??%\
@@ -19,6 +20,13 @@ CHECKED\
 - [Won't Fix] AI unable to up-find-remote wild-camel/wild-camel-class
 - [Fixed] up-get-fact / up-get-focus-fact / up-get-target-fact / up-get-player-fact   don't return true
 - [Fixed] counting buildings (dynamically) does not include pending
+- [Fixed] up-create-group unable to assign to an empty list
+- [Fixed] unable to count other players' organ-gun-line/gbeto-line/gbeto/organ-gun/elite-organ-gun (retuns -1) but elite-gbeto works
+- [Fixed] counting other players' barracks huskarl or elite barracks huskarl returns -1, counting huskarl-set returns 2 less than expected
+- [Fixed] object-data-move-x/y not working when object not moving
+- [Partially Fixed] DUC finding ally buildings [building-class/all-units-class finds all the pieces of TC (109, 618, 619, 620, 1649) instead of just 109]
+- [Partially Fixed] up-get-object-type-data: object-data-speed doesnt work and returns -2, object-data-dropsite incorrectly gives 109 (town-center) when it shouldnt be avilable for this command [object-data-dropsite gives 68 (mill) whereas it should be something like -1]
+- [Partially Fixed] up-get-object-data: object-data-train-site not working for villagers (including idle villager type), object-data-dropsite bugged for villagers (always gives 109 (town-center)) when it should give mill, lumber camp, or mining camp depending on what it was assigned to [object-data-gather-type still has the same bug as before where it doesn’t change until the villager starts gathering the new resource. It needs to change immediately when the villager is assigned to the new resource.]
 
 ...\
 IN PROGRESS\
@@ -38,19 +46,12 @@ PENDING\
 - many ResourceAmount constants defined by DE inconsistent with UserPatchConst.per constant definitions
 - creating scenario with x players, saving, new SP start, exit, add player to map, save, exit, enter SP lobby -> crash
 - up-find-resource broken ((up-find-resource c: -1 c: 40) causes a crash) (fixed?)
-- object-data-move-x/y broken
-- up-create-group broken
-- counting enemy barracks huskarl or elite barracks huskarl returns -1, counting huskarl-set returns 2 less than expected
 - timers bugged (fixed?)
 - tc ungarrison onto deer (up-gather-inside c: town-center c: -1) prevents gather points from being set
 - up-create-group when the local list includes garrisoned units does not work correctly, any garrisoned units will be excluded from the goup
-- up-get-object-type-data: object-data-speed doesnt work and returns -2, object-data-dropsite incorrectly gives 109 (town-center) when it shouldnt be avilable for this command
-- up-get-object-data: object-data-train-site not working for villagers (including idle villager type), object-data-dropsite bugged for villagers (always gives 109 (town-center)) when it should give mill, lumber camp, or mining camp depending on what it was assigned to
 - object-data-gather-type is only set when villager starts gathering when it should be set immediately when it is assigned. it does reset "correctly" to -1 when villager is returning from the camp after dropping off their resources
 - object-data-action-time behaves differently in DE but its also bugged in UP
-- unable to count enemy organ-gun-line/gbeto-line/gbeto/organ-gun/elite-organ-gun (retuns -1) but elite-gbeto works
 - old battering ram id (35) no longer works for DUC since feudal battering ram was added as the base unit (is warning)
-- DUC funding ally buildings
 - unable to DUC find ally/enemytrade carts
 - (sn-ignore-tower-elevation 0) still does not prefer high elevation
 - (up-get-point position-enemy gl-target-point-x) does not get nearest target player building (ex. castle)
