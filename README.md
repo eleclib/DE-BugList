@@ -90,7 +90,7 @@ PENDING\
 - Resetting Offense Priorities each pass causes a crash
 - Chat Box Lag for Win11 users, letters cant be typed until after delay
 - action-stop can cause a crash
-
+- there are cases where the path distance calculation is wrong (path distances on arena f.e. not always showing that objects inside the enemy's walled town were inaccessible)
 
 
 
