@@ -1,0 +1,27 @@
+
+; timernegative
+
+; TEST FOR: timers bugged when setting to negative value
+
+; using TheMaximalBeing's test example
+
+(defconst timer-disabled 0)
+(defconst timer-triggered 1)
+(defconst timer-running 2)
+
+(defrule
+    (true)
+    =>
+    (up-set-timer c: 18 c: -1))
+(defrule
+    (up-timer-status 18 c:== timer-triggered)
+    =>
+    (chat-local-to-self "triggered"))
+(defrule
+    (up-timer-status 18 c:== timer-running)
+    =>
+    (chat-local-to-self "running"))
+(defrule
+    (up-timer-status 18 c:== timer-disabled)
+    =>
+    (chat-local-to-self "disabled"))

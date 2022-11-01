@@ -3,9 +3,9 @@
 From Oldest to Newest in #bug-reports channel on AIScripters\
 NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
-Number of Found Bugs since Dec 28, 2021: 61\
-Number of Bugs unchecked since then: 51\
-Number of Bugs fixed since then: 6\
+Number of Found Bugs since Dec 28, 2021: 63\
+Number of Bugs unchecked since then: 48\
+Number of Bugs fixed since then: 9\
 Number of Bugs partially fixed since then: 3\
 Number of Bugs broken since then: 0\
 Number of Bugs as "Won't Fix": 1\
@@ -27,6 +27,9 @@ CHECKED\
 - [Partially Fixed] DUC finding ally buildings [building-class/all-units-class finds all the pieces of TC (109, 618, 619, 620, 1649) instead of just 109]
 - [Partially Fixed] up-get-object-type-data: object-data-speed doesnt work and returns -2, object-data-dropsite incorrectly gives 109 (town-center) when it shouldnt be avilable for this command [object-data-dropsite gives 68 (mill) whereas it should be something like -1]
 - [Partially Fixed] up-get-object-data: object-data-train-site not working for villagers (including idle villager type), object-data-dropsite bugged for villagers (always gives 109 (town-center)) when it should give mill, lumber camp, or mining camp depending on what it was assigned to [object-data-gather-type still has the same bug as before where it doesn’t change until the villager starts gathering the new resource. It needs to change immediately when the villager is assigned to the new resource.]
+- [Fixed] creating scenario with x players, saving, new SP start, exit, add player to map, save, exit, enter SP lobby -> crash
+- [Fixed] timers bugged when setting to negative value
+- [Fixed] game crash without error box if constant is undefined
 
 ...\
 IN PROGRESS\
@@ -44,9 +47,7 @@ PENDING\
 - up-assign-builders for palisade wall and stone-wall doesnt work (fixed?)
 - up-object-type-count/-total broken (does not account for pending structures being built and maybe units too?) - up-object-type-count/-total broken for anything that isnt a unit-line or building-line with exception to villagers and gates
 - many ResourceAmount constants defined by DE inconsistent with UserPatchConst.per constant definitions
-- creating scenario with x players, saving, new SP start, exit, add player to map, save, exit, enter SP lobby -> crash
 - up-find-resource broken ((up-find-resource c: -1 c: 40) causes a crash) (fixed?)
-- timers bugged (fixed?)
 - tc ungarrison onto deer (up-gather-inside c: town-center c: -1) prevents gather points from being set
 - up-create-group when the local list includes garrisoned units does not work correctly, any garrisoned units will be excluded from the goup
 - object-data-gather-type is only set when villager starts gathering when it should be set immediately when it is assigned. it does reset "correctly" to -1 when villager is returning from the camp after dropping off their resources
@@ -67,7 +68,6 @@ PENDING\
 - place-point makes buildings placed far from target point, even with small placement zone size
 - map eyecandy (tree on water) causing game crash upon hovering with mouse
 - setting promotional picture for a mod to make mod public, game crashes
-- game crash without error box if constant is undefined
 - villagers going to boar on opposite part of map regardless of LOS (uncapped max hunt distance).
 - DUC searching for Ally markets not returning the market (fixed in earlier PUP build?)
 - extreme ai doesnt shoot arrows (garrisoned) when upping to next age

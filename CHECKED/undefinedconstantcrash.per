@@ -1,0 +1,11 @@
+
+; undefinedconstantcrash
+
+; TEST FOR: - game crash without error box if constant is undefined
+
+(defrule
+    (game-time > undefined-time-defconst)
+    =>
+    (chat-to-all "checking undefined time defconst")
+)
+
