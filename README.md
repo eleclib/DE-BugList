@@ -3,7 +3,7 @@
 From Oldest to Newest in #bug-reports channel on AIScripters\
 NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
-Number of Found Bugs since Dec 28, 2021: 63\
+Number of Found Bugs since Dec 28, 2021: 64\
 Number of Bugs unchecked since then: 48\
 Number of Bugs fixed since then: 9\
 Number of Bugs partially fixed since then: 3\
@@ -48,7 +48,6 @@ PENDING\
 - up-object-type-count/-total broken (does not account for pending structures being built and maybe units too?) - up-object-type-count/-total broken for anything that isnt a unit-line or building-line with exception to villagers and gates
 - many ResourceAmount constants defined by DE inconsistent with UserPatchConst.per constant definitions
 - up-find-resource broken ((up-find-resource c: -1 c: 40) causes a crash) (fixed?)
-- tc ungarrison onto deer (up-gather-inside c: town-center c: -1) prevents gather points from being set
 - up-create-group when the local list includes garrisoned units does not work correctly, any garrisoned units will be excluded from the goup
 - object-data-gather-type is only set when villager starts gathering when it should be set immediately when it is assigned. it does reset "correctly" to -1 when villager is returning from the camp after dropping off their resources
 - object-data-action-time behaves differently in DE but its also bugged in UP
@@ -92,5 +91,5 @@ PENDING\
 - action-stop can cause a crash
 - there are cases where the path distance calculation is wrong (path distances on arena f.e. not always showing that objects inside the enemy's walled town were inaccessible)
 - idle-farm-count yielding negative values on map water nomad (one farm is occupied, returns -1, two farms returns -2)
-
-
+- up-gather-inside: You can not properly set the gather point since it seems to just get reset each loop. You can only set it in the same loop that you use the unload command. While you can now use action-unload and go-to-work on the tc the villagers won’t actually gather from the resource that you used the gather point on. Instead they just walk up to it, bump into it, and then reassign elsewhere. You still cannot use action-ungarrison at all (the one that works on individual units).
+- escrow for up-build does not work
