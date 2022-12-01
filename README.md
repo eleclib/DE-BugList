@@ -3,7 +3,7 @@
 From Oldest to Newest in #bug-reports channel on AIScripters\
 NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
-Number of Found Bugs since Dec 28, 2021: 64\
+Number of Found Bugs since Dec 28, 2021: 65\
 Number of Bugs unchecked since then: 47\
 Number of Bugs fixed since then: 10\
 Number of Bugs partially fixed since then: 3\
@@ -93,3 +93,4 @@ PENDING\
 - idle-farm-count yielding negative values on map water nomad (one farm is occupied, returns -1, two farms returns -2)
 - up-gather-inside: You can not properly set the gather point since it seems to just get reset each loop. You can only set it in the same loop that you use the unload command. While you can now use action-unload and go-to-work on the tc the villagers won’t actually gather from the resource that you used the gather point on. Instead they just walk up to it, bump into it, and then reassign elsewhere. You still cannot use action-ungarrison at all (the one that works on individual units).
 - escrow for up-build does not work
+- custom scenario maps getting "difficulty-adjustment" identifier error for Promisory (DE AI) script
