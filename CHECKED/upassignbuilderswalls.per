@@ -1,0 +1,38 @@
+
+; Testing for up-assign-builders on walls (palisade and stone)
+; Starting in Post-Imperial Age as Chinese Civ
+
+(defrule
+	(true)
+	=>
+	(set-strategic-number sn-cap-civilian-builders 200)
+	(disable-self)
+)
+
+(defrule
+	(true)
+	=>
+	(up-get-point position-self 41)
+	(up-get-point position-self 43)
+	(up-modify-goal 43 c:- 10)
+	(up-build-line 41 43 c: palisade-wall)
+	(disable-self)
+)
+
+(defrule
+	(true)
+	=>
+	(up-get-point position-self 41)
+	(up-get-point position-self 43)
+	(up-modify-goal 43 c:+ 10)
+	(up-build-line 41 43 c: stone-wall)
+	(disable-self)
+)
+
+(defrule
+	(true)
+	=>
+	(up-assign-builders c: palisade-wall c: 3)
+	(up-assign-builders c: stone-wall c: 3)
+	(disable-self)
+)

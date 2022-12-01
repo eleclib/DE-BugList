@@ -4,8 +4,8 @@ From Oldest to Newest in #bug-reports channel on AIScripters\
 NOTE: The bugs listed have not fully been re-checked for being resolved, some may have been fixed while others may not have been. This list is pending.
 
 Number of Found Bugs since Dec 28, 2021: 64\
-Number of Bugs unchecked since then: 48\
-Number of Bugs fixed since then: 9\
+Number of Bugs unchecked since then: 47\
+Number of Bugs fixed since then: 10\
 Number of Bugs partially fixed since then: 3\
 Number of Bugs broken since then: 0\
 Number of Bugs as "Won't Fix": 1\
@@ -30,6 +30,7 @@ CHECKED\
 - [Fixed] creating scenario with x players, saving, new SP start, exit, add player to map, save, exit, enter SP lobby -> crash
 - [Fixed] timers bugged when setting to negative value
 - [Fixed] game crash without error box if constant is undefined
+- [Fixed] up-assign-builders for palisade-wall and stone-wall doesnt work
 
 ...\
 IN PROGRESS\
@@ -44,7 +45,6 @@ PENDING\
 - unit assistance cant be disabled between sn-safe-town-size and sn-maximum-town-size
 - object-data-target-id only return -1 when units in formation with action-patrol or action-attack-move even when they are attacking enemy's object
 - cant queue techs one after another, only a tech and a unit (fixed?)
-- up-assign-builders for palisade wall and stone-wall doesnt work (fixed?)
 - up-object-type-count/-total broken (does not account for pending structures being built and maybe units too?) - up-object-type-count/-total broken for anything that isnt a unit-line or building-line with exception to villagers and gates
 - many ResourceAmount constants defined by DE inconsistent with UserPatchConst.per constant definitions
 - up-find-resource broken ((up-find-resource c: -1 c: 40) causes a crash) (fixed?)
